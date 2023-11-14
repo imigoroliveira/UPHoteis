@@ -1,0 +1,24 @@
+.footer {
+    width: 100%;
+    background-color: #0852C5;
+    color: #fff;
+    padding: 10px; 
+    position: fixed;
+    bottom: 0;
+    font-size: 0.8rem; 
+  
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 70px;
+    }
+  
+    p {
+      margin: 2px 0;
+    }
+  }
+  

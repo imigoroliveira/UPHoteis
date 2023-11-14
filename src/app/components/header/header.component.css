@@ -1,0 +1,19 @@
+/* header.component.scss */
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    .logo {
+      max-height: 100px;
+    }
+  
+    button {
+      color: white; /* Cor dos botões na barra de navegação */
+      margin: 0 4px; /* Ajuste o espaçamento entre os botões */
+    }
+  }
+  
+  .matNav{
+    background-color: #0852C5;
+  }
