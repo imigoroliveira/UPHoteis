@@ -1,0 +1,69 @@
+<div class="tabelaHoteis">
+  <div class="superior">
+    <div class="search-input">
+      <mat-form-field>
+        <mat-label>Pesquisar Hotéis</mat-label>
+        <input matInput type="text" [(ngModel)]="termoPesquisa" (input)="realizarPesquisa()">
+      </mat-form-field>
+    </div>
+
+    <div class="add-button">
+      <button class="btnAdd" mat-raised-button (click)="openNewHotelDialog()">Adicionar Novo Hotel</button>
+    </div>
+  </div>
+    
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>ID</th>
+          <td mat-cell *matCellDef="let hotel">{{ hotel.id }}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="cnpj">
+          <th mat-header-cell *matHeaderCellDef>CNPJ</th>
+          <td mat-cell *matCellDef="let hotel">{{ hotel.cnpj }}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="nome">
+          <th mat-header-cell *matHeaderCellDef>Nome</th>
+          <td mat-cell *matCellDef="let hotel">{{ hotel.nome }}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="endereco">
+          <th mat-header-cell *matHeaderCellDef>Endereço</th>
+          <td mat-cell *matCellDef="let hotel">{{ hotel.endereco }}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="contato">
+          <th mat-header-cell *matHeaderCellDef>Contato</th>
+          <td mat-cell *matCellDef="let hotel">{{ hotel.contato }}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="mediaEstrelas">
+          <th mat-header-cell *matHeaderCellDef>Média de Estrelas</th>
+          <td mat-cell *matCellDef="let hotel">{{ hotel.mediaEstrelas }}</td>
+      </ng-container>
+  
+
+      <ng-container matColumnDef="editar">
+          <th mat-header-cell *matHeaderCellDef>Editar</th>
+          <td mat-cell *matCellDef="let hotel">
+            <button mat-icon-button (click)="editarHotel(hotel)">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="excluir">
+          <th mat-header-cell *matHeaderCellDef>Excluir</th>
+          <td mat-cell *matCellDef="let hotel">
+            <button mat-icon-button (click)="excluirHotel(hotel)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

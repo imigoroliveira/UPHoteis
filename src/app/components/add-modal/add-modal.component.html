@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>{{ data.title }}</h1>
+<div mat-dialog-content class="modalContent">
+  <form #form="ngForm" (ngSubmit)="adicionarItem(form)">
+    <div *ngFor="let field of data.fields">
+      <mat-form-field class="modalFormField">
+        <input
+          matInput
+          placeholder="{{ field.label }}"
+          [(ngModel)]="formData[field.key]"
+          [type]="field.type"
+          name="{{ field.key }}"
+          required
+        />
+      </mat-form-field>
+    </div>
+    <div mat-dialog-actions class="modalActions">
+      <button mat-button type="button" (click)="onNoClick()">Cancelar</button>
+      <button mat-button type="submit" class="modalSubmitButton">Adicionar</button>
+    </div>
+  </form>
+</div>

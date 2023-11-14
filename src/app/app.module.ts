@@ -12,6 +12,18 @@ import { FuncionariosComponent } from './pages/funcionarios/funcionarios.compone
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { HoteisComponent } from './pages/hoteis/hoteis.component';
+import { MatTableModule } from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
+import {MatIconModule} from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { AddModalComponent } from './components/add-modal/add-modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ReservasComponent } from './pages/reservas/reservas.component';
+
 
 @NgModule({
   declarations: [
@@ -21,14 +33,25 @@ import { MatButtonModule } from '@angular/material/button';
     HomeComponent,
     QuartosComponent,
     ClientesComponent,
-    FuncionariosComponent
+    FuncionariosComponent,
+    HoteisComponent,
+    AddModalComponent,
+    ReservasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
     NoopAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule,
+    HttpClientModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule   ,
+    MatDialogModule,
+    MatSnackBarModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

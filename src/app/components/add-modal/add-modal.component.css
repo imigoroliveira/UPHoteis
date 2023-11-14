@@ -1,0 +1,19 @@
+  .modalFormfield {
+    width: 100%;
+    max-height: none !important;
+}
+  
+  .modalActions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .modalSubmitButton {
+    background-color: #0852C5; 
+    color: white; 
+  }
+  .modalContent{
+    max-width: none !important;
+    max-height: none !important;
+    padding: 10%;
+  }

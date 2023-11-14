@@ -9,11 +9,14 @@ mat-toolbar {
     }
   
     button {
-      color: white; /* Cor dos botões na barra de navegação */
-      margin: 0 4px; /* Ajuste o espaçamento entre os botões */
+      color: white;
+      margin: 0 4px;
     }
   }
   
   .matNav{
     background-color: #0852C5;
+  }
+  .navBtn{
+    color: #fff !important
   }

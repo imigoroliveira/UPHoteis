@@ -1,0 +1,42 @@
+
+  .tabelaHoteis {
+    width: 55%; 
+    margin-top: 10%; 
+    margin-left: 5%;
+  }
+  
+  table.mat-elevation-z8 {
+    margin-left: 10px;
+  }
+
+  .tabelaHoteis button {
+    margin-right: 8px; 
+    color: #0852C5;
+  }
+
+  .superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 15%; 
+    width: 90%;
+    background-color: #fff; 
+    z-index: 1000;
+ }
+  
+  .search-input {
+    flex: 1; 
+    margin-left: 40%;
+    margin-bottom: -3%;
+  }
+  .btnAdd {
+    border: 0.1px solid #0852C5; /* Adicione 'solid' para especificar o tipo de borda */
+    color: #ffffff;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+  
+  .btnAdd:hover {
+    background-color: #0852C5;
+    color: #ffffff !important; /* Use !important para garantir que esta regra tenha alta prioridade */
+  }
